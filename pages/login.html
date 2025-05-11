@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenCircle - Login / Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <div class="flex min-h-screen">
+    
+    <!-- Left: Form Section -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-10 py-12">
+      <h2 class="text-4xl font-bold text-indigo-600 mb-2" id="formTitle">Login to OpenCircle</h2>
+      <p class="mb-6 text-gray-600">Welcome back! Let's get you learning again.</p>
+
+      <form class="space-y-5" id="form">
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" placeholder="jane.doe@example.com" required />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium">Password</label>
+          <input type="password" id="password" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" placeholder="••••••••" required />
+        </div>
+
+        <div id="extraFields" class="hidden">
+          <div>
+            <label class="block text-sm font-medium">Full Name</label>
+            <input type="text" id="name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" placeholder="Jane Doe" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Confirm Password</label>
+            <input type="password" id="confirm-password" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" placeholder="••••••••" />
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2 px-4 rounded-lg font-semibold transition" id="submitBtn">
+          Login
+        </button>
+      </form>
+
+      <div class="mt-4 text-sm text-center">
+        <span id="toggleText">Don't have an account?</span>
+        <button onclick="toggleForm()" id="toggleBtn" class="text-indigo-600 font-medium hover:underline ml-1">
+          Sign Up
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: Showcase or Branding -->
+    <div class="hidden md:flex w-1/2 bg-indigo-600 text-white items-center justify-center p-10">
+      <div class="max-w-md text-center">
+        <h1 class="text-5xl font-extrabold mb-4">OpenCircle</h1>
+        <p class="text-lg leading-relaxed">
+          Connect with learners, mentors, and creators around the world. <br />
+          <span class="italic">“Where skills meet community.”</span>
+        </p>
+        <div class="mt-6">
+          <p class="text-sm font-light">Example users:</p>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>👩‍💻 Jane Doe – Frontend Mentor</li>
+            <li>🎸 Alex Smith – Music Instructor</li>
+            <li>📷 Priya Patel – Photography Enthusiast</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const formTitle = document.getElementById("formTitle");
+    const submitBtn = document.getElementById("submitBtn");
+    const toggleText = document.getElementById("toggleText");
+    const toggleBtn = document.getElementById("toggleBtn");
+    const extraFields = document.getElementById("extraFields");
+
+    let isLogin = true;
+
+    function toggleForm() {
+      isLogin = !isLogin;
+      formTitle.textContent = isLogin ? "Login to OpenCircle" : "Create an OpenCircle Account";
+      submitBtn.textContent = isLogin ? "Login" : "Sign Up";
+      toggleText.textContent = isLogin ? "Don't have an account?" : "Already have an account?";
+      toggleBtn.textContent = isLogin ? "Sign Up" : "Login";
+      extraFields.classList.toggle("hidden", isLogin);
+    }
+  </script>
+</body>
+</html>

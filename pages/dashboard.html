@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenCircle Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-indigo-700 text-white p-6 hidden md:block">
+      <h2 class="text-2xl font-bold mb-10">OpenCircle</h2>
+      <nav class="space-y-4">
+        <a href="#" class="block py-2 px-4 rounded hover:bg-indigo-600">Dashboard</a>
+        <a href="#" class="block py-2 px-4 rounded hover:bg-indigo-600">My Skills</a>
+        <a href="#" class="block py-2 px-4 rounded hover:bg-indigo-600">Find Mentors</a>
+        <a href="#" class="block py-2 px-4 rounded hover:bg-indigo-600">Messages</a>
+        <a href="#" class="block py-2 px-4 rounded hover:bg-indigo-600">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <!-- Welcome -->
+      <div class="bg-white rounded-lg shadow p-6 mb-6">
+        <h1 class="text-3xl font-bold text-indigo-700">Welcome back, Jane!</h1>
+        <p class="text-gray-600 mt-1">Here's what's happening in your learning circle today.</p>
+      </div>
+
+      <!-- Skill Summary -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-gray-700">Active Skills</h3>
+          <ul class="mt-2 text-sm text-gray-600 list-disc pl-5">
+            <li>JavaScript (Level: Intermediate)</li>
+            <li>UI Design (Level: Beginner)</li>
+            <li>Photography (Mentoring)</li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-gray-700">Weekly Goals</h3>
+          <ul class="mt-2 text-sm text-gray-600 list-disc pl-5">
+            <li>Finish React project</li>
+            <li>Mentor 1 user</li>
+            <li>Practice portrait photography</li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-gray-700">Recent Connections</h3>
+          <ul class="mt-2 text-sm text-gray-600">
+            <li>👩‍💻 Sarah K. - Learner (Web Dev)</li>
+            <li>🎨 Ronak M. - Mentor (Design)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Upcoming Events -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold text-gray-700 mb-4">Upcoming Sessions</h2>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between bg-indigo-50 px-4 py-3 rounded">
+            <div>
+              <p class="font-medium text-indigo-700">React Basics Workshop</p>
+              <p class="text-sm text-gray-600">May 7, 2025 | 6:00 PM</p>
+            </div>
+            <button class="bg-indigo-600 text-white px-4 py-1 rounded hover:bg-indigo-700">Join</button>
+          </div>
+          <div class="flex items-center justify-between bg-indigo-50 px-4 py-3 rounded">
+            <div>
+              <p class="font-medium text-indigo-700">Photography Feedback Circle</p>
+              <p class="text-sm text-gray-600">May 9, 2025 | 3:00 PM</p>
+            </div>
+            <button class="bg-indigo-600 text-white px-4 py-1 rounded hover:bg-indigo-700">Join</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
